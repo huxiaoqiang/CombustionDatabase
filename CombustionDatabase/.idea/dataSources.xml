@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2578065100">
+    <data-source source="LOCAL" name="Django default" uuid="7d758420-9778-47b9-a596-1fa38c1dd27f">
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://101.6.240.45:3306/cyber_infrastructure_combustion</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc9dfc9dfcfdfcedfcbdfdedfcbdfc8dfcbdfd9dfcfdf98df9bdf98</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/mysql-connector-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.PyCharm30/config/jdbc-drivers/mysql-connector-java-5.1.26-bin.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</project>
+

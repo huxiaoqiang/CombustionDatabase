@@ -1,3 +1,3 @@
-angular.module("myApp.servise",["$scope"],function($scope){
-
-})
+//angular.module("myApp.servise",["$scope"],function($scope){
+//
+//})

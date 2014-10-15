@@ -80,6 +80,7 @@ STATICFILES_DIRS = (
     ("partial",os.path.join(os.path.dirname(BASE_DIR),"static","partial").replace('\\','/')),
     ("images",os.path.join(os.path.dirname(BASE_DIR),"static","images").replace('\\','/')),
     ("css",os.path.join(os.path.dirname(BASE_DIR),"static","css").replace('\\','/')),
+    ("less",os.path.join(os.path.dirname(BASE_DIR),"static","less").replace('\\','/'))
 )
 
 # List of finder classes that know how to find static files in

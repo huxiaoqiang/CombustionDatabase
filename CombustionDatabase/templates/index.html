@@ -1,28 +1,27 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en">
     <head>
         <title>CombustionDatabaseManager</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.css"/>
-        <script type="text/javascript" src="/static/lib/bootstrap/ui-bootstrap-tpls-0.10.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.min.css"/>
         <script type="text/javascript" src="/static/lib/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript" src="/static/lib/bootstrap/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="/static/lib/angular-1.2.6/angular.min.js"></script>
-        <script type="text/javascript" src="/static/lib/angular-1.2.6/angular-route.min.js"></script>
+        <script type="text/javascript" src="/static/lib/angular-1.2.6/angular-ui-route.min.js"></script>
         <script type="text/javascript" src="/static/lib/angular-1.2.6/angular-resource.min.js"></script>
         <script type="text/javascript" src="/static/lib/angular-1.2.6/angular-cookies.min.js"></script>
         <script type="text/javascript" src="/static/lib/angular-1.2.6/angular-sanitize.min.js"></script>
         <script type="text/javascript" src="/static/lib/angular-1.2.6/angular-file-upload.min.js"></script>
-        <script type="text/javascript" src="/static/lib/angular-1.2.6/tinymce.js"></script>
-    </head>
-    <body>
-    {% include "header.html" %}
-    <div ng-view>
 
-    </div>
+    </head>
+    <body ng-app="combustion">
+    {% include "header.html" %}
+    <div ui-view></div>
     {% include "footer.html" %}
-    <link type="text/css" href="/static/css/index.css"/>
+    <!--<link type="text/css" href="/static/css/index.css"/>-->
+    <link rel="stylesheet" type="text/css" href="/static/less/base.css"/>
     <script type="text/javascript" src="/static/js/app.js"></script>
     <script type="text/javascript" src="/static/js/controller.js"></script>
-    <script type="text/javascript" src="/static/js/servese.js"></script>
+    <!--<script type="text/javascript" src="/static/js/servese.js"></script>-->
     </body>
 </html>

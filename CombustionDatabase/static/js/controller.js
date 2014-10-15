@@ -1,20 +1,15 @@
-angular.module("myApp.controllers",[]).
-    controller('HomepageCtrl',['$scope'],function($scope){
+angular.module("combustion.controllers",[]).
+    controller('HomepageCtrl',function($scope,$http,urls,$location){
         console.log("homepageCtrl");
-    $scope.register = function(){
-        
-    };
-    $scope.log = function(){
-
-    };
-
+        $scope.register = function(){
+            $location.url('/reg');
+        };
     }).
-    controller('RegisterCtrl',['$scope','$http','urls'],function($scope,$http,urls){
+    controller('RegisterCtrl',function($scope,$http,urls,$location){
         console.log("RegisterCtrl");
         $scope.account_info = {
             username:'',
             password:'',
             passwordagain:''
         };
-
-    })
+    });

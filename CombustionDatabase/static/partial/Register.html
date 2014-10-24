@@ -1,9 +1,9 @@
-<div class="container mainbody">
+<div class="container mainbody LogReg">
     <form class="form-register" role="form">
             <label>Please Register</label>
-            <input type="text" class="form-control" placeholder="username" required autofocus/>
-            <input type="password" class="form-control" placeholder="password" required>
-            <input type="password" class="form-control" placeholder="password again" required>
-            <a href="#" class="button glow button-rounded button-flat-primary">register</a>
+            <input type="text" class="form-control" placeholder="username" required autofocus ng-model="regist_info.username" />
+            <input type="password" class="form-control" placeholder="password" required ng-model="regist_info.password">
+            <input type="password" class="form-control" placeholder="password again" required ng-model="regist_info.repassword">
+            <input type="submit" class="ui button green" value="register" ng-click="regist_user()">
     </form>
 </div>

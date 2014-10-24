@@ -10,8 +10,6 @@ angular.module('combustion',[
         "part":"/static/partial"
     }).
     config(['$stateProvider','$urlRouterProvider',"urls",function($stateProvider,$urlRouterProvider,urls){
-//        $locationProvider.html5Mode(true);
-//        $locationProvider.hashPrefix='';
         $urlRouterProvider.otherwise('/');
         $stateProvider.state('home',{
             url:'/',
@@ -26,6 +24,6 @@ angular.module('combustion',[
         $stateProvider.state('search',{
             url:'/search',
             templateUrl:urls.part+'/search.html',
-            controller:'HeaderCtrl'
+            controller:'searchCtrl'
         })
     }]);

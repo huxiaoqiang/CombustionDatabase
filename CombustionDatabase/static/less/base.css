@@ -23,18 +23,18 @@ header .navbar .container-fluid {
   margin-left: 300px;
 }
 .login_regCss {
-  margin-left: 35%;
-  margin-top: 16%;
+  margin-left: 30%;
+  margin-top: 13%;
+  padding-bottom: 11%;
   width: 400px;
-  background-image: url('/static/images/banner-bg.png');
 }
 .login_regCss label {
   width: 100%;
-  padding-left: 20% ;
-  background-color: #cccccc;
-  font-family: initial;
+  padding-left: 28% ;
+  font-family: cursive;
   font-size: xx-large;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 .login_regCss .form-control {
   width: 80%;
@@ -43,22 +43,22 @@ header .navbar .container-fluid {
 }
 .login_regCss .button {
   margin-left: 10%;
-  width: 80%;
+  width: 34%;
   margin-bottom: 10%;
 }
 .form-Login {
-  margin-left: 35%;
-  margin-top: 16%;
+  margin-left: 30%;
+  margin-top: 13%;
+  padding-bottom: 11%;
   width: 400px;
-  background-image: url('/static/images/banner-bg.png');
 }
 .form-Login label {
   width: 100%;
-  padding-left: 20% ;
-  background-color: #cccccc;
-  font-family: initial;
+  padding-left: 28% ;
+  font-family: cursive;
   font-size: xx-large;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 .form-Login .form-control {
   width: 80%;
@@ -67,22 +67,22 @@ header .navbar .container-fluid {
 }
 .form-Login .button {
   margin-left: 10%;
-  width: 80%;
+  width: 34%;
   margin-bottom: 10%;
 }
 .form-register {
-  margin-left: 35%;
-  margin-top: 16%;
+  margin-left: 30%;
+  margin-top: 13%;
+  padding-bottom: 11%;
   width: 400px;
-  background-image: url('/static/images/banner-bg.png');
 }
 .form-register label {
   width: 100%;
-  padding-left: 20% ;
-  background-color: #cccccc;
-  font-family: initial;
+  padding-left: 28% ;
+  font-family: cursive;
   font-size: xx-large;
   margin-bottom: 20px;
+  color: #ffffff;
 }
 .form-register .form-control {
   width: 80%;
@@ -91,7 +91,7 @@ header .navbar .container-fluid {
 }
 .form-register .button {
   margin-left: 10%;
-  width: 80%;
+  width: 34%;
   margin-bottom: 10%;
 }
 * {
@@ -114,8 +114,11 @@ body > #wrap {
   padding-bottom: 70px;
 }
 body .mainbody {
-  width: 80%;
-  background-color: #EEEEEE;
+  width: 100%;
+}
+body .LogReg {
+  background: url("banner-bg.png") no-repeat;
+  margin-top: 100px;
 }
 .clearfix:after {
   content: ".";

@@ -29,18 +29,38 @@ angular.module("combustion.controllers",[]).
     }).
     controller('SearchCtrl',function($scope,$location){
         console.log("SearchCtrl");
-        $scope.option=[
-        "bibliography",
-        "data_attribute",
-        "dataset",
-        "element",
-        "experiment",
-        "instrumental_model",
-        "model",
-        "optimization_variable_bound",
-        "reaction",
-        "reaction_rate",
-        "surrogate_model",
-        "species",
-        "thermo_dynamic_polynomia"];
+        $scope.model=[
+         {name:"bibliography",
+         items:['primeID','preferredKey','title', 'year']},
+         {name:"data_attribute",
+         items:['primeID','preferredKey','origin']},
+         {name:"dataset",
+         items:['primeID']},
+         {name:"element",
+         items:['primeID','elementName','elementSymbol','number']},
+         {name:"experiment",
+         items:['primeID','preferredKey']},
+         {name:"instrumental_model",
+         items:['primeID','preferredKey']},
+         {name:"model",
+         items:['primeID','preferredKey']},
+         {name:"optimization_variable_bound",
+         items:['primeID','variableID']},
+         {name:"reaction",
+         items:['primeID','canonicalForm']},
+         {name:"reaction_rate",
+         items:['primeID','reactionID','preferredKey']},
+         {name:"surrogate_model",
+         items:['primeID','datasetID','dataAttributeID']},
+         {name:"species",
+         items:['primeID','preferredKey','name','CASRegistryNumber','InChI','formula']},
+         {name:"thermo_dynamic_polynomia",
+         items:['primeID','speciesID']}
+         ];
+        $scope.result = ['1','2','3'];
+        $scope.search_result = function(){
+            $scope.show = true;
+        }
+        $scope.show = false;
+
     });

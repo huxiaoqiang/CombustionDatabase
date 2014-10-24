@@ -3,8 +3,8 @@ angular.module('combustion',[
     'combustion.controllers'
     ]).
     config(['$interpolateProvider',function($interpolateProvider){
-        $interpolateProvider.startSymbol('<%');
-	    $interpolateProvider.endSymbol('%>');
+        $interpolateProvider.startSymbol('[[');
+	    $interpolateProvider.endSymbol(']]');
     }]).
     constant("urls",{
         "part":"/static/partial"
@@ -24,6 +24,6 @@ angular.module('combustion',[
         $stateProvider.state('search',{
             url:'/search',
             templateUrl:urls.part+'/search.html',
-            controller:'searchCtrl'
+            controller:'SearchCtrl'
         })
     }]);

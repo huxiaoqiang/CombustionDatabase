@@ -1,5 +1,6 @@
 angular.module('combustion',[
     'ui.router',
+    'combustion.directives',
     'combustion.controllers'
     ]).
     config(['$interpolateProvider',function($interpolateProvider){
@@ -25,5 +26,14 @@ angular.module('combustion',[
             url:'/search',
             templateUrl:urls.part+'/search.html',
             controller:'SearchCtrl'
-        })
+        });
+        $stateProvider.state('model',{
+            url:'/data/model',
+            templateUrl:urls.part+'/data/model.html',
+            controller:'ModelCtrl'
+        });
+//        .config('$locationProvider',function($locationProvider){
+//                $locationProvider.html5Mode(true);
+//                $locationProvider.hashPrefix = '';
+//            })
     }]);

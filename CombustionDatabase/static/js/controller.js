@@ -26,6 +26,15 @@ angular.module("combustion.controllers",[]).
         $scope.search = function(){
             $location.url('/search');
         }
+        $scope.login = function(){
+            $location.url('/');
+        }
+        $scope.regist=function(){
+            $location.url('/reg');
+        }
+        $scope.modelEdit=function(){
+            $location.url('/data/model');
+        }
     }).
     controller('SearchCtrl',function($scope,$location){
         console.log("SearchCtrl");
@@ -62,5 +71,10 @@ angular.module("combustion.controllers",[]).
             $scope.show = true;
         }
         $scope.show = false;
+    }).
+    controller('ModelCtrl',function($scope,$location){
+        console.log("ModelCtrl");
+        $scope.openXml=function(){
 
+        }
     });

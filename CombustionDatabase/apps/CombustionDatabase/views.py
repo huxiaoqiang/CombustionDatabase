@@ -8,7 +8,7 @@ import sys
 import json
 
 sys.path.append("../..")
-from settings import STATICFILES_DIRS
+#from settings import STATICFILES_DIRS
 
 
 def index(request):

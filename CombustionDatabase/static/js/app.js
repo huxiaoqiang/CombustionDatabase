@@ -1,14 +1,17 @@
 angular.module('combustion',[
     'ui.router',
+    'ngCookies',
     'combustion.directives',
-    'combustion.controllers'
+    'combustion.controllers',
+    'combustion.services'
     ]).
     config(['$interpolateProvider',function($interpolateProvider){
         $interpolateProvider.startSymbol('[[');
-	    $interpolateProvider.endSymbol(']]');
+        $interpolateProvider.endSymbol(']]');
     }]).
     constant("urls",{
-        "part":"/static/partial"
+        "part":"/static/partial",
+        "api":"/api"
     }).
     config(['$stateProvider','$urlRouterProvider',"urls",function($stateProvider,$urlRouterProvider,urls){
         $urlRouterProvider.otherwise('/');
@@ -32,8 +35,4 @@ angular.module('combustion',[
             templateUrl:urls.part+'/data/model.html',
             controller:'ModelCtrl'
         });
-//        .config('$locationProvider',function($locationProvider){
-//                $locationProvider.html5Mode(true);
-//                $locationProvider.hashPrefix = '';
-//            })
     }]);

@@ -1,10 +1,9 @@
 from django.db import models
+import json
 
 
-class User(models.Model):
+class userInfo(models.Model):
     username = models.CharField(max_length=32)
-    password = models.CharField(max_length=32)
-    authority = models.IntegerField()
     mail = models.EmailField()
 
 class bibligraphy(models.Model):
@@ -269,4 +268,3 @@ class thermo_bib(models.Model):
 	speciesID = models.CharField(max_length = 9)
 	bibID = models.CharField(max_length= 9)
 	bibPreferredKey = models.CharField(max_length = 20)
-

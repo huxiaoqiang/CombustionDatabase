@@ -20,7 +20,7 @@ header .navbar {
   margin-bottom: 0px;
 }
 header .navbar .container-fluid {
-  margin-left: 300px;
+  margin-left: 25%;
 }
 .login_regCss {
   margin-left: 30%;
@@ -119,6 +119,9 @@ body .mainbody {
 body .LogReg {
   background: url("banner-bg.png") no-repeat;
   margin-top: 100px;
+}
+body .btn {
+  margin-bottom: 10px;
 }
 .clearfix:after {
   content: ".";

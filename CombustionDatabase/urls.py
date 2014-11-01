@@ -16,6 +16,8 @@ urlpatterns = patterns('',
     #User
 	url(r'^api/user/regist$', 'apps.CombustionDatabase.user.register'),
     url(r'^api/user/login$', 'apps.CombustionDatabase.user.login'),
-   	url(r'^$', 'apps.CombustionDatabase.views.index'),	
+    url(r'^api/user/userinfo/get$','apps.CombustionDatabase.user.get_userinfo'),
+   	url(r'^$', 'apps.CombustionDatabase.views.index'),
+    url(r'^api/user/logout$','apps.CombustionDatabase.user.logout'),
 )
 urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

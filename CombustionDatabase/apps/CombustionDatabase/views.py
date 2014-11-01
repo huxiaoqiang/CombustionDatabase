@@ -1,7 +1,7 @@
 # Create your views here.
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
-from django.template import Context,Template
+from django.template import Context,Template,RequestContext
 from django.template.loader import get_template
 import os
 import sys
@@ -12,9 +12,9 @@ sys.path.append("../..")
 
 
 def index(request):
-    t = get_template('index.html')
-    c = Context()
-    html = t.render(c)
+    #t = get_template('index.html')
+    #c = Context()
+    html=render_to_response('index.html',context_instance=RequestContext(request))
     return HttpResponse(html)
 
 def get(request, type ,id):

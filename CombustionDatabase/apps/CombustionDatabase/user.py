@@ -5,8 +5,8 @@ from django.contrib import auth
 from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 from django.utils import simplejson
-import MySQLdb
 import sys
 
 @csrf_exempt
@@ -18,9 +18,9 @@ def register(request):
         password = req['password']
         #email = request.post.get('email','')
         if username == '':
-            re['error'] = {'code':'106','errorMsg':'please enter the username'}
+            re['error'] = {'code':103,'errorMsg':'please enter the username'}
         elif username.isdigit():
-            re['error'] = {'code':106,'erroeMsg':'the username need one letter at least'}
+            re['error'] = {'code':104,'errorMsg':'the username need one letter at least'}
         elif len(password) < 6 or len(password) > 20:
             re['error'] = {'code':110,'errorMsg':'length of password is illegal'}
         else:
@@ -38,9 +38,9 @@ def register(request):
                     userinfo.save()
                     return resp
                 else:
-                    re['error'] =  {'code':104,'errorMsg':'regist fails'}
+                    re['error'] =  {'code':105,'errorMsg':'regist fails'}
             except:
-                re['error'] = {'code':107,'errorMsg':'username exists!'}
+                re['error'] = {'code':102,'errorMsg':'username exists!'}
     else:
         re['error'] = {'code':2,'errorMsg':'error,need POST'}
     return HttpResponse(json.dumps(re), content_type = 'application/json')
@@ -67,4 +67,28 @@ def login(request):
            re['error'] = {'code':101,'errorMsg': 'username or password error'}
     else:
         re['error'] = {'code':2,'errorMsg': 'error,need POST'}
+    return HttpResponse(json.dumps(re), content_type = 'application/json')
+
+def get_userinfo(request):
+    re = dict()
+    if request.method == 'GET':
+        username = request.user.username
+        try:
+            userinfo = userInfo.objects.get(username=username)
+        except:
+            re['error'] = {'code':103,'errorMsg':'username do not exist'}
+        else:
+            re['userinfo'] = {'username':userinfo.username,'mail':userinfo.mail}
+            re['error'] = {'code':1,'errorMsg':'GET succeed'}
+    else:
+        re['error'] = {'code':2,'errorMsg': 'Need GET'}
+    return HttpResponse(json.dumps(re), content_type = 'application/json')
+
+def logout(request):
+    re = dict()
+    if request.method == 'GET':
+            auth.logout(request)
+            re['error'] = {'code':1,'errorMsg':'logout succeed'}
+    else:
+        re['error']={'code':2,'errorMsg':'Need GET'}
     return HttpResponse(json.dumps(re), content_type = 'application/json')

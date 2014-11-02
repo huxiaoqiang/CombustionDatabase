@@ -13,9 +13,9 @@ angular.module("combustion.services",[]).
             },
             'format_error': function(error) {
                 if(error['code'] == 1){
-                    error['type'] = 'success';
+                    error['type'] = 'alert alert-success';
                 }else{
-                    error['type'] = 'danger';
+                    error['type'] = 'alert alert-danger';
                 }
                 error['show'] = true;
                     return error;

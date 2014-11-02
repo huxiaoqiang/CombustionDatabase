@@ -13,7 +13,7 @@ angular.module("combustion.controllers",[]).
                 }
                 else{
                     $cookieStore.put("username",$scope.login_info.username);
-                    window.location.href='/';
+                    window.location.href='/#/search';
                     alert('login succeed!');
                 }
             })
@@ -42,6 +42,9 @@ angular.module("combustion.controllers",[]).
                 }
             });
         };
+        $scope.backtologin=function(){
+              $location.url('/');
+        };
     }]).
     controller('HeaderCtrl',['$scope','$location','UserService', function($scope,$location,$user){
         console.log("HeaderCtrl");
@@ -51,7 +54,6 @@ angular.module("combustion.controllers",[]).
             alert("logout");
             $user.logout();
         }
-        
     }]).
     controller('SearchCtrl',['$scope','$location','UserService',function($scope,$location,$user){
         console.log("SearchCtrl");

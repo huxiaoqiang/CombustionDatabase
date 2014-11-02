@@ -43,4 +43,15 @@ angular.module('combustion.directives', []).
         '</div>',
       replace: true
     };
-  });
+  }).
+    directive('errormessage',['urls',function(urls){
+        return{
+            restrict:'E',
+            replace:true,
+            transclude:true,
+            scope:{
+                error:'=error'
+            },
+            templateUrl:urls.part+'/errorMsg.html'
+        };
+    }]);

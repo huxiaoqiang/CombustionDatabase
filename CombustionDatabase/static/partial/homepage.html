@@ -1,9 +1,12 @@
 <div class="container mainbody LogReg">
     <form class="form-Login" role="form">
+        <div class="form-group">
             <label>User Login</label>
                 <input type="text" class="form-control" placeholder="username" required autofocus ng-model="login_info.username"/>
                 <input type="password" class="form-control" placeholder="password" ng-model="login_info.password" required/>
-                <input type="submit" class="ui button green" value="login" ng-click="login()">
-                <input type="button" class="ui button blue" value="register" ng-click="register()">
+                <input type="submit" class="btn btn-primary" value="login" ng-click="login()">
+                <input type="button" class="btn btn-primary" value="register" ng-click="register()">
+                <errormessage error="error"></errormessage>
+        </div>
     </form>
 </div>

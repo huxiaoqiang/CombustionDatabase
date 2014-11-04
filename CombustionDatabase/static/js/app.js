@@ -23,4 +23,9 @@ angular.module('combustion',[
             templateUrl:urls.part+'/register.html',
             controller:'RegisterCtrl'
          });
+        $stateProvider.state('search',{
+            url:'/search',
+            templateUrl:urls.part+'/search.html',
+            controller:'HeaderCtrl'
+        })
     }]);

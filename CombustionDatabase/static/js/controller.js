@@ -12,4 +12,12 @@ angular.module("combustion.controllers",[]).
             password:'',
             passwordagain:''
         };
+    }).
+    controller('HeaderCtrl',function($scope,$location){
+        console.log("HeaderCtrl");
+        $scope.search = function(){
+
+            $location.url('/search');
+
+        }
     });

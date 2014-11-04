@@ -4,8 +4,9 @@ footer#footer {
   background-color: #f1f1f1;
   height: 70px;
   position: relative;
-  top: 20px;
+  margin-top: -70px;
   color: #c0c0c0;
+  clear: both;
 }
 footer#footer .level {
   text-align: center;
@@ -14,4 +15,121 @@ footer#footer .level {
 }
 footer#footer .first-row {
   line-height: 17px;
+}
+header .navbar {
+  margin-bottom: 0px;
+}
+header .navbar .container-fluid {
+  margin-left: 300px;
+}
+.login_regcss {
+  margin-left: 35%;
+  margin-top: 16%;
+  width: 400px;
+  background: beige;
+}
+.login_regcss label {
+  width: 100%;
+  padding-left: 20% ;
+  background-color: #cccccc;
+  font-family: initial;
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+.login_regcss .form-control {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
+.login_regcss .button {
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 10%;
+}
+.form-Login {
+  margin-left: 35%;
+  margin-top: 16%;
+  width: 400px;
+  background: beige;
+}
+.form-Login label {
+  width: 100%;
+  padding-left: 20% ;
+  background-color: #cccccc;
+  font-family: initial;
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+.form-Login .form-control {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
+.form-Login .button {
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 10%;
+}
+.form-register {
+  margin-left: 35%;
+  margin-top: 16%;
+  width: 400px;
+  background: beige;
+}
+.form-register label {
+  width: 100%;
+  padding-left: 20% ;
+  background-color: #cccccc;
+  font-family: initial;
+  font-size: xx-large;
+  margin-bottom: 20px;
+}
+.form-register .form-control {
+  width: 80%;
+  margin-bottom: 10px;
+  margin-left: 10%;
+}
+.form-register .button {
+  margin-left: 10%;
+  width: 80%;
+  margin-bottom: 10%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body,
+#wrap {
+  height: 100%;
+}
+body > #wrap {
+  height: auto;
+  min-height: 100%;
+}
+#main-container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 70px;
+}
+body .mainbody {
+  width: 80%;
+  background-color: #EEEEEE;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
 }

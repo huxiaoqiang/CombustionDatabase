@@ -1,5 +1,4 @@
-# Django settings for CombustionDatabase project.
-
+# Django settings
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 import  os
@@ -63,7 +62,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static').replace('\\','/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static').replace('\\','/')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -75,12 +74,12 @@ STATICFILES_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     #os.path.join(os.path.dirname(BASE_DIR),"..","static").replace('\\','/'),
-    ("js",os.path.join(os.path.dirname(BASE_DIR),"static","js").replace('\\','/')),
-    ("lib",os.path.join(os.path.dirname(BASE_DIR),"static","lib").replace('\\','/')),
-    ("partial",os.path.join(os.path.dirname(BASE_DIR),"static","partial").replace('\\','/')),
-    ("images",os.path.join(os.path.dirname(BASE_DIR),"static","images").replace('\\','/')),
-    ("css",os.path.join(os.path.dirname(BASE_DIR),"static","css").replace('\\','/')),
-    ("less",os.path.join(os.path.dirname(BASE_DIR),"static","less").replace('\\','/'))
+    ("js",os.path.join(BASE_DIR,"static","js").replace('\\','/')),
+    ("lib",os.path.join(BASE_DIR,"static","lib").replace('\\','/')),
+    ("partial",os.path.join(BASE_DIR,"static","partial").replace('\\','/')),
+    ("images",os.path.join(BASE_DIR,"static","images").replace('\\','/')),
+    ("css",os.path.join(BASE_DIR,"static","css").replace('\\','/')),
+    ("less",os.path.join(BASE_DIR,"static","less").replace('\\','/'))
 )
 
 # List of finder classes that know how to find static files in
@@ -111,16 +110,16 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'CombustionDatabase.urls'
+ROOT_URLCONF = 'urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'CombustionDatabase.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    (os.path.join(os.path.dirname(BASE_DIR), 'templates').replace('\\','/'),)
+    (os.path.join(BASE_DIR, 'templates').replace('\\','/'),)
 )
 
 INSTALLED_APPS = (
@@ -132,7 +131,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
-    'app',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

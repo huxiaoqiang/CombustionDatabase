@@ -11,7 +11,7 @@ admin.autodiscover()
 
 
 urlpatterns = patterns('',
-
+	url(r'^index', 'apps.CombustionDatabase.views.index'),
     url(r'^admin/',include(admin.site.urls)),
     url(r'^combustion/',include('apps.CombustionDatabase.urls')),
 )
